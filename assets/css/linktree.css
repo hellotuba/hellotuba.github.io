@@ -1,0 +1,134 @@
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    /*
+        Blue: hsl(207, 90%, 61%)
+        Purple: hsl(250, 66%, 75%)
+        Pink: hsl(356, 66%, 75%)
+        Teal: hsl(174, 63%, 62%)
+    */
+  
+    --hue: 207;
+    --sat: 90%;
+    --lig: 61%;
+    --first-color: hsl(var(--hue), var(--sat), var(--lig));
+    --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
+    --title-color: hsl(var(--hue), 12%, 15%);
+    --text-color: hsl(var(--hue), 12%, 45%);
+    --text-color-light: hsl(var(--hue), 8%, 75%);
+    --text-color-lighten: hsl(var(--hue), 8%, 92%);
+    --body-color: hsl(var(--hue), 100%, 99%);
+    --container-color: #fff;
+    --box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+    --h2-font-size: 2.3rem;
+    --a-font-size: 1.6rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: .3s; /* For animation dark mode */
+}
+
+.change-theme{
+    position: absolute;
+    top: 4rem;
+    right: 30rem;
+    font-size: 1.3rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: .3;
+}
+  
+.change-theme:hover{
+    color: var(--first-color);
+}
+
+  /*========== Variables Dark theme ==========*/
+body.dark-theme{
+    --title-color: hsl(var(--hue), 12%, 95%);
+    --text-color: hsl(var(--hue), 12%, 75%);
+    --body-color: hsl(var(--hue), 40%, 8%);
+    --container-color: hsl(var(--hue), 24%, 12%);
+    --box-shadow: 0 0 13px rgba(121, 121, 121, 0.188);
+}
+
+.link-tree {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: var(--body-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+  
+.link-tree ul {
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+  
+.link-tree ul li {
+    margin-bottom: 10px;
+}
+  
+.link-tree ul li a {
+    text-decoration: none;
+    color: var(--body-font);
+    font-size: var(--a-font-size);
+    transition: .4s;
+}
+  
+.link-tree ul li a:hover {
+    color: var(--first-color);
+}
+
+.link__tree__h2{
+    align-items: center;
+    font-size: var(--h2-font-size);
+    justify-content: center;
+    display: flex;
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 1.15rem 1.5rem;
+    border-radius: .5rem;
+    transition: .3s;
+    box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), .25);
+    text-decoration: none;
+}
+  
+.button i{
+    font-size: 1.25rem;
+}
+  
+.button:hover{
+    background-color: var(--first-color-alt);
+}
+
+.bck__portfolio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+}
