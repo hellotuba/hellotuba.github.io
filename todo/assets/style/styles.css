@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Work+Sans&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans";
+    font-weight: 400;
+    font-size: 29px;
+    background: linear-gradient(90deg, #dec8e0, #d59bd2); 
+    animation: animate 20s linear infinite; 
+} 
+header {
+    text-align: center;
+    color: rgb(7, 7, 7);
+    margin-top: 32px;
+    font-size: 45px;
+    font-weight: 600;
+}
+.todo-template {
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.add-todo-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.add-todo {
+    padding: 7px 0;
+    cursor: pointer;
+    user-select: none;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    background: #eaeaea;
+    margin-top: 120px;
+    border: #dedede 3px solid;
+    border-radius: 25px;
+    transition: .6s;
+}
+.add-todo:hover{
+    background: #c3c3c3;
+    transition: .6s;
+}
+.todo-text {
+    font-size: 29px;
+    padding: 7px 0;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    background: #eaeaea;
+    margin-top: 12px;
+    border: #dedede 3px solid;
+    border-radius: 15px;
+}
+.todo-box {
+    padding: 7px 0;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    background: #eaeaea;
+    margin-top: 12px;
+    border: #dedede 3px solid;
+    border-radius: 8px;
+    transition: 700ms;
+}
+
+.todo-box:hover {
+    background: #ff2727;
+}
+
+p{
+    margin-left: 15rem;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        font-size: 35px;
+    }
+
+    .add-todo {
+        width: 90%;
+        margin-top: 80px;
+    }
+
+    .todo-text,
+    .todo-box {
+        font-size: 20px;
+        width: 90%;
+        margin-top: 8px;
+    }
+
+    p{
+        margin-left: 4px;
+    }
+}
+
